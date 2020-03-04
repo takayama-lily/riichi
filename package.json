@@ -1,0 +1,31 @@
+{
+  "name": "riichi",
+  "version": "0.0.1",
+  "description": "Japanese riichi mahjong hand calculation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takayama-lily/riichi.git"
+  },
+  "keywords": [
+    "riichi",
+    "mahjong",
+    "mah-jong",
+    "japan",
+    "dora",
+    "syanten",
+    "ai"
+  ],
+  "author": "takayama <takayama@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takayama-lily/riichi/issues"
+  },
+  "homepage": "https://github.com/takayama-lily/riichi#readme",
+  "dependencies": {
+    "agari": "0.0.1"
+  }
+}

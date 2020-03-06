@@ -1,0 +1,30 @@
+{
+  "name": "riichi",
+  "version": "0.0.0",
+  "description": "Riichi Mahjong(JP) Point Calculation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takayama-lily/riichi.git"
+  },
+  "keywords": [
+    "riichi",
+    "mahjong",
+    "mah-jong",
+    "japanese",
+    "japan",
+    "jp",
+    "dora",
+    "syanten",
+    "ai"
+  ],
+  "author": "takayama <takayama@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takayama-lily/riichi/issues"
+  },
+  "homepage": "https://github.com/takayama-lily/riichi#readme"
+}

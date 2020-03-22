@@ -81,7 +81,6 @@ new Riichi('1s+1s+123m55z666z7777z+d12s+trihk22') //Extra:trihk22
 default: 場風東自風南
 
 ```js
-Emample:
 new Riichi('112233456789m1s1s+1') //(場風東)自風東
 new Riichi('112233456789m1s1s+21') //場風南自風東
 new Riichi('112233456789m1s1s+24') //場風南自風北
@@ -116,4 +115,28 @@ riichi.enableLocalYaku('人和') //人和有効
 riichi.disableYaku('大七星') //大七星禁止
 
 let result = riichi.calc()
+```
+
+# 向聴数牌理計算 [lib](https://github.com/takayama-lily/syanten)
+
+```js
+console.log(new Riichi('111222333m11p123z').calc())
+```
+
+**Output**
+
+```js
+{
+  ...
+  syanten: {
+    now: 1, //現在向聴数
+    '1m': {},
+    '2m': {},
+    '3m': {},
+    '1p': {},
+    '1z': { '1p': 2, '2z': 3, '3z': 3 }, //打1z 待1p二枚 2z三枚 3z三枚
+    '2z': { '1p': 2, '1z': 3, '3z': 3 }, //打2z 待1p二枚 1z三枚 3z三枚
+    '3z': { '1p': 2, '1z': 3, '2z': 3 }  //打3z 待1p二枚 1z三枚 2z三枚
+  }
+}
 ```

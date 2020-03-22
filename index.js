@@ -1,5 +1,6 @@
 'use strict'
 const agari = require('agari')
+const syanten = require('syanten')
 const YAKU = require('./yaku')
 const MPSZ = ['m', 'p', 's', 'z']
 const KAZE = [undefined, '東', '南' ,'西', '北', '白', '發', '中']
@@ -140,7 +141,7 @@ class Riichi {
         this.aka += tmp.aka
         this.agari = this.hai.slice(-1)[0]
 
-        if (this.hai.length % 3 !== 2)
+        if (this.hai.length % 3 === 0)
             return
         if (this.hai.length + this.furo.length * 3 > 14)
             return
@@ -386,10 +387,11 @@ class Riichi {
         }
         this.tmpResult.isAgari = agari.checkAll(this.haiArray)
         if (!this.tmpResult.isAgari || this.hai.length + this.furo.length * 3 !== 14) {
-            // todo 牌理
+            this.tmpResult.syanten = syanten.hairi(this.haiArray)
             return this.tmpResult
         }
 
+        this.finalResult.isAgari = true
         if (this.extra.includes('o'))
             this.allLocalEnabled = true
         

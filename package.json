@@ -1,6 +1,6 @@
 {
   "name": "riichi",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Japanese riichi mahjong hand calculation",
   "main": "index.js",
   "scripts": {

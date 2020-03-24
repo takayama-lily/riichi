@@ -186,8 +186,7 @@ const YAKU =
                 return false
             arr.push(v[0])
         }
-        let size = new Set(arr).size
-        return size && size <= 2
+        return arr[0]+arr[2] === arr[1]+arr[3]
     }},
     "純全帯么九":{"han":3, "isFuroMinus":true, "check":(o)=>{
         let allow = ['1m', '9m', '1p', '9p', '1s', '9s']

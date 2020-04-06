@@ -1,3 +1,6 @@
+/*
+ * Copyright (C) https://github.com/takayama-lily/riichi
+ */
 'use strict'
 const agari = require('agari')
 const syanten = require('syanten')
@@ -419,6 +422,8 @@ class Riichi {
             }
             this.calcTen()
             if (this.tmpResult.ten > this.finalResult.ten)
+                this.finalResult = JSON.parse(JSON.stringify(this.tmpResult))
+            else if (this.tmpResult.ten === this.finalResult.ten && this.tmpResult.han > this.finalResult.han)
                 this.finalResult = JSON.parse(JSON.stringify(this.tmpResult))
         }
 

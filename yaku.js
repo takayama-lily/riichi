@@ -1,3 +1,6 @@
+/*
+ * Copyright (C) https://github.com/takayama-lily/riichi
+ */
 'use strict'
 const assert = require('assert')
 const agari = require('agari')

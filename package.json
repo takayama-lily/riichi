@@ -1,6 +1,6 @@
 {
   "name": "riichi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Japanese riichi mahjong hand calculation",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
   "homepage": "https://github.com/takayama-lily/riichi#readme",
   "dependencies": {
     "agari": "0.0.1",
-    "syanten": "^1.2.0"
+    "syanten": "^1.2.2"
   }
 }

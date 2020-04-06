@@ -27,6 +27,6 @@
   "homepage": "https://github.com/takayama-lily/riichi#readme",
   "dependencies": {
     "agari": "0.0.1",
-    "syanten": "^1.2.2"
+    "syanten": "^1.2.3"
   }
 }

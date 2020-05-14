@@ -202,7 +202,7 @@ const YAKU =
     "対々和":{"han":2, "check":(o)=>{
         let res = 0
         for (let v of o.currentPattern)
-            if (v.length === 1 || (v.length === 3 && v[0] === v[1]))
+            if (v.length === 1 || v[0] === v[1])
                 res++
         return res === 4
     }},

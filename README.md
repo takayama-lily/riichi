@@ -128,7 +128,7 @@ console.log(new Riichi('111222333m11p123z').calc())
 ```js
 {
   ...
-  syanten: {
+  hairi: {
     now: 1, //現在向聴数
     '1m': {},
     '2m': {},

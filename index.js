@@ -390,7 +390,8 @@ class Riichi {
         }
         this.tmpResult.isAgari = agari.checkAll(this.haiArray)
         if (!this.tmpResult.isAgari || this.hai.length + this.furo.length * 3 !== 14) {
-            this.tmpResult.syanten = syanten.hairi(this.haiArray)
+            this.tmpResult.hairi = syanten.hairi(this.haiArray)
+            this.tmpResult.hairi7and13 = syanten.hairi(this.haiArray, true)
             return this.tmpResult
         }
 

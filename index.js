@@ -191,8 +191,10 @@ class Riichi {
             return
         let dora = 0
         for (let v of this.hai) {
-            if (this.dora.includes(v))
+            for (let vv of this.dora) {
+                if (v === vv)
                     dora++
+            }
         }
         for (let v of this.furo) {
             if (v.length === 2)

@@ -264,20 +264,15 @@ const YAKU =
         return (res[0] && res[1] && res[2]) || (res[3] && res[4] && res[5]) || (res[6] && res[7] && res[8])
     }},
     "三色同順":{"han":2, "isFuroMinus":true, "check":(o)=>{
-        let res = [0,0,0,0]
+        let res = [];
         for (let v of o.currentPattern) {
-            if (v.length <= 2 || v[0] === v[1]) {
-                res[3]++
-                continue
-            }
-            let i = MPSZ.indexOf(v[0][1])
-            if (res[i])
-                res[3] = parseInt(v[0])
-            else
-                res[i] = parseInt(v[0])
+            if (v.length <= 2 || v[0] === v[1] || v[0].includes('z')) continue;
+
+            let value = parseInt(v[0]);
+            res[value] = res[value] ?? new Set();
+            res[value].add(v[0][1]);
         }
-        res = new Set(res)
-        return res.size <= 2 && !res.has(0)
+        return res.some((value) => value.size === 3);
     }},
     "断么九":{"han":1, "check":(o)=>{
         for (let v of o.furo)

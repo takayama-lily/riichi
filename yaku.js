@@ -269,7 +269,7 @@ const YAKU =
             if (v.length <= 2 || v[0] === v[1] || v[0].includes('z')) continue;
 
             let value = parseInt(v[0]);
-            res[value] = res[value] ?? new Set();
+            res[value] = res[value] ? res[value] : new Set();
             res[value].add(v[0][1]);
         }
         return res.some((value) => value.size === 3);

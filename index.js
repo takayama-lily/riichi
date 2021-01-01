@@ -106,6 +106,7 @@ class Riichi {
         this.allowWyakuman = true //false:二倍役満禁止
         this.allowKuitan = true //false:喰断禁止
         this.allowAka = true //false:赤dora禁止
+        this.hairi = true //未和了の場合、牌理を計算
 
         // 初期設定
         if (typeof data !== 'string')
@@ -383,6 +384,10 @@ class Riichi {
     // 人和 役満
     // 
 
+    disableHairi() {
+        this.hairi = false
+    }
+
     /**
      * main
      */
@@ -392,8 +397,10 @@ class Riichi {
         }
         this.tmpResult.isAgari = agari.checkAll(this.haiArray)
         if (!this.tmpResult.isAgari || this.hai.length + this.furo.length * 3 !== 14) {
-            this.tmpResult.hairi = syanten.hairi(this.haiArray)
-            this.tmpResult.hairi7and13 = syanten.hairi(this.haiArray, true)
+            if (this.hairi) {
+                this.tmpResult.hairi = syanten.hairi(this.haiArray)
+                this.tmpResult.hairi7and13 = syanten.hairi(this.haiArray, true)
+            }
             return this.tmpResult
         }
 
